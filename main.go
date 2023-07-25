@@ -10,5 +10,5 @@ func main() {
 	router.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Hello World")
 	})
-	router.Run(":8000")
+	_ = router.Run(":8000")
 }
