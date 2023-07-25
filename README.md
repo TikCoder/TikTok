@@ -1,0 +1,1 @@
+This is the minimalist `Tiktok` project of `TikCoder` development team in the sixth back-end youth training camp of ByteDance.
