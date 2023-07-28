@@ -12,7 +12,7 @@ var once sync.Once
 
 func init() {
 	once.Do(func() {
-		log.Init()
+		_ = log.Init()
 	})
 }
 

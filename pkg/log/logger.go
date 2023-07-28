@@ -47,7 +47,7 @@ func (hook *FileDataHook) Fire(entry *logrus.Entry) error {
 		if hook.asyncWriter != nil {
 			hook.asyncWriter.Write(line)
 		} else {
-			hook.file.WriteString(line)
+			_, _ = hook.file.WriteString(line)
 		}
 		return nil
 	}
@@ -72,7 +72,7 @@ func (hook *FileDataHook) Fire(entry *logrus.Entry) error {
 	if hook.asyncWriter != nil {
 		hook.asyncWriter.SetFile(file)
 	} else {
-		hook.file.WriteString(line)
+		_, _ = hook.file.WriteString(line)
 	}
 
 	return nil
@@ -87,7 +87,7 @@ func (hook *FileDataHook) rotateLog(newDate string) {
 	// 将当前目录重命名为新日期以进行日志文件轮转。
 	currentPath := filepath.Join(hook.logPath, hook.fileDate)
 	newPath := filepath.Join(hook.logPath, newDate)
-	os.Rename(currentPath, newPath)
+	_ = os.Rename(currentPath, newPath)
 
 	// 根据 maxLogAgeDays 删除旧的日志目录。
 	hook.deleteOldLogs()
@@ -122,7 +122,7 @@ func (hook *FileDataHook) deleteOldLogs() {
 		}
 
 		if time.Since(logFileDate) > maxLogAge {
-			os.Remove(file)
+			err = os.Remove(file)
 		}
 	}
 }
@@ -154,7 +154,7 @@ func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 	HttpStatusCode = 0
 
 	// 格式化日志条目，包括时间戳和日志消息。
-	fmt.Fprintf(buf, "[%s] %s\n", level.String(), entry.Message)
+	_, _ = fmt.Fprintf(buf, "[%s] %s\n", level.String(), entry.Message)
 
 	return buf.Bytes(), nil
 }
@@ -179,7 +179,7 @@ func NewAsyncWriter(file *os.File) *AsyncWriter {
 func (w *AsyncWriter) Start() {
 	go func() {
 		for line := range w.ch {
-			w.file.WriteString(line)
+			_, _ = w.file.WriteString(line)
 		}
 	}()
 }
