@@ -122,7 +122,7 @@ func (hook *FileDataHook) deleteOldLogs() {
 		}
 
 		if time.Since(logFileDate) > maxLogAge {
-			err = os.Remove(file)
+			_ = os.Remove(file)
 		}
 	}
 }
