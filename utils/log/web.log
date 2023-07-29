@@ -1,0 +1,64 @@
+2023-07-28 20:17:23.961::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:17:23.961::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:17:23.962::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:17:23.962::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:17:23.962::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:17:23.962::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:17:23.962::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:17:23.964::::::INFO:::65d25870-827f-4e11-be14-7d2d2c106df9:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:18:24.862::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:18:24.862::::::INFO:::4b18c699-a733-4647-86c7-129f4f1547ac:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:21:14.546::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:21:14.546::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:21:14.547::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:21:14.547::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:21:14.547::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:21:14.547::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:21:14.547::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:21:14.547::::::INFO:::a4c0cd11-8f1a-453f-8bd9-5ce8fa457dd7:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:21:28.216::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:21:28.216::::::INFO:::9876381f-e0fc-4dd6-afad-c4eb827c7f53:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:21:34.867::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:21:34.868::::::INFO:::3ee39c0a-f4b1-41ed-87a7-c6b0fa611866:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:22:42.628::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:22:42.628::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:22:42.628::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:22:42.628::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:22:42.628::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:22:42.629::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:22:42.629::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:22:42.629::::::INFO:::cb7f76cb-7623-4fe7-bfc0-2be54e31c5aa:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:23:00.193::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:23:00.193::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:23:00.193::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:23:00.193::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:23:00.194::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:23:00.194::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:23:00.194::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:23:00.194::::::INFO:::b73a99b0-da5a-4852-9dbe-00efcc685fd8:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
+2023-07-28 20:24:50.506::::::INFO:::<nil>:::9:::config.go.128 config.printLog:::======== [Common] ========
+2023-07-28 20:24:50.506::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.129 config.printLog:::{Port:41555 OpenTLS:false VideoPath:/root/tiktok/video}
+2023-07-28 20:24:50.506::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.130 config.printLog:::======== [MySQL] ========
+2023-07-28 20:24:50.507::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.131 config.printLog:::{Url:39.106.47.128:8086 User:root Pwd:123456 Dbname:camps_tiktok}
+2023-07-28 20:24:50.507::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.132 config.printLog:::======== [Redis] ========
+2023-07-28 20:24:50.507::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.133 config.printLog:::{Url: Auth: MaxIdle:0 MaxActive:0 IdleTimeout:0 CacheTimeout:0 CacheTimeoutVerifyCode:0 CacheTimeoutDay:0}
+2023-07-28 20:24:50.507::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.134 config.printLog:::======== [MinIO] ========
+2023-07-28 20:24:50.507::::::INFO:::bff55b88-e252-4d80-b03f-ae85bdb42c8f:::9:::config.go.135 config.printLog:::{Url:39.106.47.128 Port:9000 AccessKeyId:QqKOdoRjkLmJBwUvNXGo SecretAccessKey:ryesSCxU4nSIrzuTuJo7jeukd7O6bV6sk60Cjc5K VideoBuckets:video PictureBuckets:pic VideoPath:/root/tiktok/video PicturePath:/root/tiktok/pic}
