@@ -1,0 +1,22 @@
+[COMMON]
+port = 41555
+# 是否开启双向HTTPS认证
+open_tls = false
+video_path = "/root/tiktok/video"
+
+[MySQL]
+url = "39.106.47.128:8086"
+user = "root"
+pwd = "123456"
+db_name = "tiktok"
+
+[MinIO]
+url = "39.106.47.128"
+port = "9000"
+access_key_id = "sODRPVeUKqCsqZe5psBH"
+secret_access_key = "Ej9XOO4DeKYrW9AFlAcP0uZYCNuNB3lOTWYI8Zlv"
+video_buckets = "video"
+picture_buckets = "picture"
+video_path = "/root/tiktok/video"
+picture_path = "/root/tiktok/pic"
+
