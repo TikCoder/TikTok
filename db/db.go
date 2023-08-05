@@ -1,14 +1,17 @@
 package db
 
 import (
-	"github.com/cihub/seelog"
-	"github.com/jinzhu/gorm"
+	"fmt"
 	"tiktok2023/config"
+
+	"go.uber.org/zap"
+
+	"github.com/jinzhu/gorm"
 )
 
 var DB *gorm.DB
 
-func InitDB() error {
+func InitDB(cfg *config.MysqlConfig) error {
 	//user := config.Conf.MySQL.User
 	//url := config.Conf.MySQL.Url
 	//pwd := config.Conf.MySQL.Pwd
@@ -16,10 +19,13 @@ func InitDB() error {
 
 	var err error
 	//DB, err = Factory.CreateGorm(user, pwd, url, dbName)
-	DB, err = Factory.CreateGorm(config.Conf.MySQL.User,
-		config.Conf.MySQL.Pwd, config.Conf.MySQL.Url, config.Conf.MySQL.Dbname)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8mb4&parseTime=True",
+		cfg.User, cfg.Pwd, cfg.Url, cfg.Dbname,
+	)
+	DB, err = CreateGorm(dsn, cfg.MaxOpenConns, cfg.MaxIdleConns, cfg.MaxIdleTimeout)
 	if err != nil {
-		seelog.Errorf("CreateGorm err %s", err.Error())
+		//seelog.Errorf("CreateGorm err %s", err.Error())
+		zap.L().Error("CreateGorm err", zap.Error(err))
 		return err
 	}
 	return nil

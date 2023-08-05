@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
-	"tiktok/config"
+	"tiktok2023/config"
 	"time"
 )
 

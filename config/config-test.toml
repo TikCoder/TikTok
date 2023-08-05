@@ -3,20 +3,39 @@ port = 41555
 # 是否开启双向HTTPS认证
 open_tls = false
 video_path = "/root/tiktok/video"
+start_time = "2020-07-01"
+machine_id = 1
 
 [MySQL]
 url = "39.106.47.128:8086"
 user = "root"
 pwd = "123456"
 db_name = "tiktok"
+# 与数据库连接的最大连接数(允许的最大连接数)
+max_open_connections = 0
+# 空闲池的最大连接数(连接池里的最大连接数)
+max_idle_connections = 0
+# 设置最大空闲时间(ms)
+max_idle_timeout = 10
+max_read_timeout = 10
+max_write_timeout = 10
+
 
 [MinIO]
 url = "39.106.47.128"
 port = "9000"
-access_key_id = "sODRPVeUKqCsqZe5psBH"
-secret_access_key = "Ej9XOO4DeKYrW9AFlAcP0uZYCNuNB3lOTWYI8Zlv"
+access_key_id = "KZbJD8pWNkp2U3dwpu21"
+secret_access_key = "k2nIZ5TiosoQp2OHli9WGtxJmn1lUPQkZnPe7DTg"
 video_buckets = "video"
 picture_buckets = "picture"
 video_path = "/root/tiktok/video"
 picture_path = "/root/tiktok/pic"
+
+[Log]
+level = "debug"
+filename = "Tiktok.log"
+max_size = 200
+max_age = 30
+max_backups = 7
+
 

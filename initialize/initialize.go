@@ -1,12 +1,22 @@
 package initialize
 
 import (
-	"github.com/cihub/seelog"
-	"github.com/gin-gonic/gin"
+	"tiktok2023/config"
 	"tiktok2023/db"
 	"tiktok2023/handler"
+	"tiktok2023/logger"
 	"tiktok2023/utils/minioStore"
+
+	"go.uber.org/zap"
+
+	"github.com/gin-gonic/gin"
 )
+
+func Setup() *gin.Engine {
+	r := gin.New()
+	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+	return r
+}
 
 func RegisterRouter(r *gin.Engine) {
 	apiRouter := r.Group("/douyin")
@@ -21,12 +31,14 @@ func RegisterRouter(r *gin.Engine) {
 
 // InitInfra 初始化基础设置 Infrastructure
 func InitInfra() error {
-	err := db.InitDB()
+	err := db.InitDB(config.Conf.MySQL)
 	if err != nil {
+		zap.L().Error("init DB failed", zap.Error(err))
 		return err
 	}
 	err = minioStore.InitMinio()
 	if err != nil {
+		zap.L().Error("Init Minio failed", zap.Error(err))
 		return err
 	}
 	return nil
@@ -36,7 +48,8 @@ func InitInfra() error {
 func InitResource() error {
 	err := InitInfra()
 	if err != nil {
-		seelog.Errorf("InitInfra err %s", err.Error())
+		//seelog.Errorf("InitInfra err %s", err.Error())
+		zap.L().Error("InitInfra err", zap.Error(err))
 		return err
 	}
 	return nil
