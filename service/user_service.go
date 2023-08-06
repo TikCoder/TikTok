@@ -1,16 +1,19 @@
 package service
 
 import (
+	"TikTok/model"
+	"TikTok/utils/cache"
+	"TikTok/utils/db"
+	"fmt"
 	"github.com/jinzhu/gorm"
 	"golang.org/x/crypto/bcrypt"
-	"tiktok2023/db"
-	"tiktok2023/model"
 )
 
 type UserService struct{}
 
 // UserNameIsExit 查询用户是否存在
 func (user *UserService) UserNameIsExit(username string) (*model.User, bool, error) {
+	//userInfo, err := cache.RedisConn.GetUserCacheInfo()
 	userInfo, err := db.GetUserInfoByUsername(db.DB, username)
 	if err != nil {
 		// 数据记录不存在
@@ -39,26 +42,33 @@ func (user *UserService) InsertUser(username, password string) (*model.User, err
 
 		return nil, err
 	}
-
+	// 存入缓存
+	err = cache.RedisConn.SetUserCacheInfo(&userInfo)
+	if err != nil {
+		// log err cache set
+		fmt.Println("CreateUser cache set err")
+	}
 	return &userInfo, nil
 }
 
 // GetUserInfo 获取用户信息
 func (user *UserService) GetUserInfo(userId int64) (*model.User, error) {
-	// 根据 用户id 查询信息
-	userInfo, err := user.GetUserInfoByUserId(userId)
+	// 1. 查缓存
+	userInfo, err := cache.RedisConn.GetUserCacheInfo(userId)
+	if err == nil && userInfo.Id == userId {
+		// todo log cache succ
+		return userInfo, nil
+	}
+	// 2. 根据 用户id 查询信息
+	userInfo, err = db.GetUserInfoByUserId(db.DB, userId)
 	if err != nil {
 		return nil, err
 	}
 
-	return userInfo, nil
-}
-
-// GetUserInfoByUserId 根据用户ID 获取用户信息
-func (user *UserService) GetUserInfoByUserId(userId int64) (*model.User, error) {
-	userInfo, err := db.GetUserInfoByUserId(db.DB, userId)
+	// 3. 创建缓存
+	err = cache.RedisConn.SetUserCacheInfo(userInfo)
 	if err != nil {
-		return nil, err
+		// todo cache err
 	}
 	return userInfo, nil
 }

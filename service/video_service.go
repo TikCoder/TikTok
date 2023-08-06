@@ -1,11 +1,13 @@
 package service
 
 import (
+	"TikTok/model"
+	"TikTok/utils"
+	"TikTok/utils/cache"
+	db "TikTok/utils/db"
+	"TikTok/utils/minioStore"
+	"fmt"
 	"strconv"
-	"tiktok2023/db"
-	"tiktok2023/model"
-	"tiktok2023/utils"
-	"tiktok2023/utils/minioStore"
 	"time"
 )
 
@@ -60,5 +62,25 @@ func (v *VideoService) PublishVideoToDB(authorId int64, videoUrl, pictureUrl, ti
 	if err != nil {
 		return err
 	}
+	// 更新到缓存
+	err = cache.RedisConn.SetVideoCaCheInfo(videoInfo)
+	if err != nil {
+		// todo log cache err
+		fmt.Println("video cache err")
+	}
 	return nil
+}
+
+// GetAuthorId 根据视频ID查视频信息
+func (v *VideoService) GetAuthorId(videoId int64) (*model.Video, error) {
+	// 获取视频缓存
+	videoInfo, err := cache.RedisConn.GetVideoCaCheInfo(videoId)
+	if err != nil {
+		// 没有找到，再去找数据库
+		videoInfo, err = db.GetVideoInfoByVideoId(db.DB, videoId)
+		if err != nil {
+			return nil, err
+		}
+	}
+	return videoInfo, err
 }

@@ -1,6 +1,8 @@
 package service
 
-import "tiktok2023/db"
+import (
+	"TikTok/utils/db"
+)
 
 type RelationService struct {
 }
