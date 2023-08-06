@@ -1,13 +1,13 @@
 package handler
 
 import (
+	"TikTok/constant"
+	"TikTok/model"
+	"TikTok/utils/jwtUtils"
 	"errors"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
-	"tiktok2023/constant"
-	"tiktok2023/model"
-	"tiktok2023/utils/jwtUtils"
 )
 
 type PublishListHandle struct {

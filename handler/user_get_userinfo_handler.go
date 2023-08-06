@@ -10,13 +10,14 @@ import (
 	"strconv"
 )
 
-type FavoriteVideoListHandle struct {
-	Req  model.FavoriteVideoListReq
-	Resp model.FavoriteVideoListResp
+type GetUserInfoHandler struct {
+	Req  model.GetUserInfoReq
+	Resp model.GetUserInfoResp
 }
 
-func FavoriteVideoList(c *gin.Context) {
-	var handle PublishListHandle
+func GetUserInfo(c *gin.Context) {
+	// 声明响应
+	var handle GetUserInfoHandler
 	var err error
 	defer func() {
 		handle.Resp.StatusMsg = constant.GetErrMsg(handle.Resp.StatusCode)
@@ -37,7 +38,7 @@ func FavoriteVideoList(c *gin.Context) {
 }
 
 // HandleInput 输入检查
-func (r *FavoriteVideoListHandle) HandleInput() error {
+func (r *GetUserInfoHandler) HandleInput() error {
 	if r.Req.UserId == 0 || r.Req.Token == "" {
 		// todo: log error
 		r.Resp.StatusCode = constant.ERR_INPUT_INVALID
@@ -46,7 +47,8 @@ func (r *FavoriteVideoListHandle) HandleInput() error {
 	return nil
 }
 
-func (r *FavoriteVideoListHandle) HandleProcess() error {
+// HandleProcess 处理逻辑
+func (r *GetUserInfoHandler) HandleProcess() error {
 	// jwt 鉴权
 	jwtId, err := jwtUtils.VerifyToken(r.Req.Token)
 	if err != nil {
@@ -59,6 +61,16 @@ func (r *FavoriteVideoListHandle) HandleProcess() error {
 		r.Resp.StatusCode = constant.ERR_GET_USER
 		return errors.New("userId is wrong")
 	}
-	r.Resp.VideoList = make([]model.VideoInfo, 0)
+
+	userInfo, err := userService.GetUserInfo(r.Req.UserId)
+	if err != nil {
+		r.Resp.StatusCode = constant.ERR_USER_IS_NOT_EXIT
+		return err
+	}
+	r.Resp.User.User = *userInfo
+	r.Resp.User.IsFollow = false // 是否被关注
+
+	// todo 缓存
+
 	return nil
 }
